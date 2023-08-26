@@ -12,6 +12,8 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            /*para deixar o cabeçalho fixo, tem q ter posicionamento relativo*/
+            position: relative;
         }
 
         td, th {
@@ -19,9 +21,33 @@
             padding: 10px;
         }
 
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
         thead, tfoot {
-            background-color: gray;
+            background-color: #383838;
             color: white;
+        }
+
+        /*deixando o cabeçalho fixo*/
+        /*th q está dentro do tr q está dentro do cabeçalho*/
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: #383838;
+        }
+
+        /*efeito zebrado na tabela*/
+        /*pode usar assim tb: nth-child(2n) ou nth-child(2n-1)*/
+        tbody > tr:nth-child(odd) {/*2n-1*/
+            background-color: white;
+        }
+        tbody > tr:nth-child(even) {/*2n*/
+            background-color: lightgray;
         }
 
         td.num {
@@ -33,15 +59,17 @@
     <h1>Uso de tabelas grandes</h1>
     <!--
         Anatomia de tabelas grandes
+        caption - legenda(título) da tabela
         thead
         tbody
         tfoot
     -->
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
             </tr>
         </thead>
         <tbody>
@@ -65,13 +93,99 @@
                 <td>Paraná</td>
                 <td class="num">11.433.957</td>
             </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45.919.049</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21.168.791</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17.264.943</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14.873.054</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">11.433.957</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45.919.049</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21.168.791</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17.264.943</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14.873.054</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">11.433.957</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45.919.049</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21.168.791</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17.264.943</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14.873.054</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">11.433.957</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td class="num">45.919.049</td>
+            </tr>
+            <tr>
+                <td>Minas Gerais</td>
+                <td class="num">21.168.791</td>
+            </tr>
+            <tr>
+                <td>Rio de Janeiro</td>
+                <td class="num">17.264.943</td>
+            </tr>
+            <tr>
+                <td>Bahia</td>
+                <td class="num">14.873.054</td>
+            </tr>
+            <tr>
+                <td>Paraná</td>
+                <td class="num">11.433.957</td>
+            </tr>
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
-                <td class="num"><strong>100.000.000</strong></td>
+                <th scope="row">Total de Habitantes</th>
+                <td class="num"><strong>200.000.000</strong></td>
             </tr>
         </tfoot>
     </table>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto earum dignissimos expedita exercitationem autem? Inventore placeat eum deleniti, exercitationem velit doloremque perspiciatis odio nobis facilis nesciunt, delectus quidem repellendus quaerat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse amet ipsam nobis saepe incidunt quisquam ex, error corporis facilis accusantium omnis officia dicta voluptatum quia obcaecati repudiandae vel eveniet fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas temporibus aut ut nulla ab similique quo, explicabo nisi suscipit autem sequi quam dolores, voluptatum itaque iure, adipisci neque debitis in! Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae a, autem sint ratione facere ducimus quia doloribus deserunt temporibus, aliquid provident veritatis! Voluptatem voluptatum pariatur doloribus labore mollitia quod. Vitae?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto earum dignissimos expedita exercitationem autem? Inventore placeat eum deleniti, exercitationem velit doloremque perspiciatis odio nobis facilis nesciunt, delectus quidem repellendus quaerat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse amet ipsam nobis saepe incidunt quisquam ex, error corporis facilis accusantium omnis officia dicta voluptatum quia obcaecati repudiandae vel eveniet fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas temporibus aut ut nulla ab similique quo, explicabo nisi suscipit autem sequi quam dolores, voluptatum itaque iure, adipisci neque debitis in! Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae a, autem sint ratione facere ducimus quia doloribus deserunt temporibus, aliquid provident veritatis! Voluptatem voluptatum pariatur doloribus labore mollitia quod. Vitae?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto earum dignissimos expedita exercitationem autem? Inventore placeat eum deleniti, exercitationem velit doloremque perspiciatis odio nobis facilis nesciunt, delectus quidem repellendus quaerat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse amet ipsam nobis saepe incidunt quisquam ex, error corporis facilis accusantium omnis officia dicta voluptatum quia obcaecati repudiandae vel eveniet fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas temporibus aut ut nulla ab similique quo, explicabo nisi suscipit autem sequi quam dolores, voluptatum itaque iure, adipisci neque debitis in! Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae a, autem sint ratione facere ducimus quia doloribus deserunt temporibus, aliquid provident veritatis! Voluptatem voluptatum pariatur doloribus labore mollitia quod. Vitae?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto earum dignissimos expedita exercitationem autem? Inventore placeat eum deleniti, exercitationem velit doloremque perspiciatis odio nobis facilis nesciunt, delectus quidem repellendus quaerat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse amet ipsam nobis saepe incidunt quisquam ex, error corporis facilis accusantium omnis officia dicta voluptatum quia obcaecati repudiandae vel eveniet fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas temporibus aut ut nulla ab similique quo, explicabo nisi suscipit autem sequi quam dolores, voluptatum itaque iure, adipisci neque debitis in! Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae a, autem sint ratione facere ducimus quia doloribus deserunt temporibus, aliquid provident veritatis! Voluptatem voluptatum pariatur doloribus labore mollitia quod. Vitae?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto earum dignissimos expedita exercitationem autem? Inventore placeat eum deleniti, exercitationem velit doloremque perspiciatis odio nobis facilis nesciunt, delectus quidem repellendus quaerat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse amet ipsam nobis saepe incidunt quisquam ex, error corporis facilis accusantium omnis officia dicta voluptatum quia obcaecati repudiandae vel eveniet fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas temporibus aut ut nulla ab similique quo, explicabo nisi suscipit autem sequi quam dolores, voluptatum itaque iure, adipisci neque debitis in! Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae a, autem sint ratione facere ducimus quia doloribus deserunt temporibus, aliquid provident veritatis! Voluptatem voluptatum pariatur doloribus labore mollitia quod. Vitae?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto earum dignissimos expedita exercitationem autem? Inventore placeat eum deleniti, exercitationem velit doloremque perspiciatis odio nobis facilis nesciunt, delectus quidem repellendus quaerat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse amet ipsam nobis saepe incidunt quisquam ex, error corporis facilis accusantium omnis officia dicta voluptatum quia obcaecati repudiandae vel eveniet fugit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas temporibus aut ut nulla ab similique quo, explicabo nisi suscipit autem sequi quam dolores, voluptatum itaque iure, adipisci neque debitis in! Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae a, autem sint ratione facere ducimus quia doloribus deserunt temporibus, aliquid provident veritatis! Voluptatem voluptatum pariatur doloribus labore mollitia quod. Vitae?</p>
 </body>
 </html>
