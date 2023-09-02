@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meu primeiro formulário</h1>
+    <!--Se o envio de informações não tiver dados sensiveis, como cartao de credito, nome ou senha, usar o método GET.
+    Com o Método GET, é possível compartilhar a URL do site com outras pessoas.
+    Com o método GET é possível enviar até 3k bytes de dados.
+    Envio de fotos não da pra usar o GET.-->
+    <!--Quando usar o método POST:
+    - Quando tiver dados sensíveis (para isso, tem q usar o HTTPS, estudar no futuro);
+    - Quando não quiser mostrar as informações dos dados enviados na URL;
+    - Quando os dados a serem enviados passarem de 3k bytes;
+    - Se quiser fazer envio de arquivos;-->
+    <!--Hoje em dia não tem mais diferença entre a velocidade dos métodos GET e POST, é imperceptível-->
+    <form action="cadastro.php" method="post" autocomplete="off">
+        <p>
+            <!--no for do label, colocamos o id do input para relacionar o texto Nome: com o input-->
+            <label for="inome">Nome:</label> 
+            <input type="text" name="nome" id="inome">
+        </p>
+        <p>
+            <label for="isobrenome">Sobrenome: </label>
+            <input type="text" name="sobrenome" id="isobrenome">
+        </p>
+        <p><input type="submit" value="Enviar"></p>
+    </form>
+</body>
+</html>
