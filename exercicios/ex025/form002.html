@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Teste de Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <!--required no input: faz com que seja obrigatório preencher para enviar-->
+        <!--minlength e maxlength: comprimento mínimo e máximo dos valores que serão preenchidos no input-->
+        <!--size: tamanho da caixa de texto. Somente quantas letras vai mostrar, não limita-->
+        <!--placeholder: texto que fica aparecendo no input para dar uma dica. Quando digitar algo, a dica some-->
+        <!--autocomplete: se deixar on na tag form, precisa informar nos inputs qual tipo de dado vai completar-->
+        <p>
+            <label for="iusu">Usuário: </label>
+            <input type="text" name="usu" id="iusu" required minlength="5" maxlength="15" size="15" placeholder="nome do usuario" autocomplete="username">
+        </p>
+        <p>
+            <label for="isen">Senha: </label>
+            <input type="password" name="sen" id="isen" required minlength="8" maxlength="20" size="20" placeholder="mínimo 8 letras" autocomplete="current-password">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
