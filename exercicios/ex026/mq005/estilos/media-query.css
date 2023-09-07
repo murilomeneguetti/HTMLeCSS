@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+/*configurando visualisação para telas maiores que celulares*/
+@media screen and (min-width: 786px) {
+    #burger {
+        display: none;
+    }
+
+    menu {
+        display: block;
+    }
+
+    menu > ul > li {
+        /*deixando os botões de opção um do lado do outro*/
+        display: inline-block;
+    }
+
+    main {
+        width: 768px;
+    }
+}
